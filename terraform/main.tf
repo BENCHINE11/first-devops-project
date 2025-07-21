@@ -6,7 +6,9 @@ terraform {
       }
     }
     backend "s3" {
-        key = "aws/ec2-deploy/terraform.tfstate"
+        bucket = "firstawsbucket-1065-7211-7826"
+        key    = "aws/ec2-deploy/terraform.tfstate"
+        region = "eu-west-3"
     }
 }
 provider "aws" {
